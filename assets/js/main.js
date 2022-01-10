@@ -26,6 +26,15 @@
 			}, 100);
 		});
 
+
+		copyEmail = () => {
+			//Copy to clipboard
+			navigator.clipboard.writeText("ddermil@yahoo.com");
+
+			//Alert pop-up
+			alert("Email Copied");
+		}
+		
 	// Touch?
 		if (browser.mobile)
 			$body.addClass('is-touch');
@@ -181,5 +190,5 @@
 						$menu._hide();
 
 			});
-
+			
 })(jQuery);
