@@ -35,6 +35,7 @@
 			alert("Email Copied");
 		}
 		
+		
 	// Touch?
 		if (browser.mobile)
 			$body.addClass('is-touch');
@@ -191,4 +192,5 @@
 
 			});
 			
+	
 })(jQuery);
