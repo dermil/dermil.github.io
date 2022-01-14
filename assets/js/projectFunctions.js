@@ -1,19 +1,25 @@
 /* Project functions */
 
 		//Pig latin translator
-		function translatePigLatin(str) {
+		function translatePigLatin() {
 			let vowel = /^[aeiou]/g;
-			let repl = document.getElementById('pigLat').value;
-			if (str ==''){
-				str = document.getElementById('pigEng').value;
+			let str = document.getElementById('pigEng').value.toLowerCase().split(" ");
+			let newStr = [];
+			for (let i = 0; i < str.length; i++){
+				if (vowel.test(str[i])){
+					newStr.push(str[i].replace(/(^[a-z]+||[aeiou]+)/,"$1way")) //Replace vowels
+				} else {
+					newStr.push(str[i].replace(/(^[^aeiou]+)([a-z]+||[aeiou]+)/,"$2$1ay")) //Replace consonants
+					
+				}  
+			}
+			let fStr = newStr.join(" ");
+			
+			capitalizeFirstLetter = (str) => {
+				return str.charAt(0).toUpperCase() + str.slice(1);
 			}
 
-			if (vowel.test(str)){
-				let newStr = str.replace(/(^[a-z]+||[aeiou]+)/,"$1way") //Replace vowels
-				return document.getElementById("pigLat").value = newStr;
-			} else {
-				let newStr = str.replace(/(^[^aeiou]+)([a-z]+||[aeiou]+)/,"$2$1ay") //Replace consonants
-				return document.getElementById("pigLat").value = newStr;
-			}  
+
+			return document.getElementById("pigLat").value = capitalizeFirstLetter(fStr);
 		}
 		
