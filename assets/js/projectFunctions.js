@@ -24,9 +24,9 @@
 		}
 
 		//Cash register
-		var register = [];
+		var register = ["yes"];
 		//Create the cash register with random variables
-		let randomizeCashRegister = () =>{
+		function randomizeCashRegister() {
 			let cid = [];
 			function getRndInteger(min, max) {
 				return Math.floor(Math.random() * (max - min)) + min;
@@ -77,7 +77,7 @@
 						break;
 	
 					case "TWENTY":
-						 cur = [y,(getRndInteger(0,12)*currency[y])]
+						 cur = [y,(getRndInteger(2,12)*currency[y])]
 						break;
 	
 					case "ONE HUNDRED":
@@ -87,8 +87,10 @@
 				}
 				cid.push(cur);
 			}
-			return register = cid;
+			register = cid;
+			return document.getElementById("cashRegister").value = register;
 		}
+		
 		//Load the cash register initially
 		$(window).on('load', randomizeCashRegister());
 		
