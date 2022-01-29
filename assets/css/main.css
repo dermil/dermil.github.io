@@ -2685,8 +2685,8 @@ input, select, textarea {
 					color: #ffffff !important;
 				}
 				
-				.tiles article.style1 .content {
-					color: #b8d498 !important;
+				.tiles article:hover img {
+					filter: blur(2px);
 				}
 
 				.tiles article > a h2 {
