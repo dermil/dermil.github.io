@@ -159,3 +159,28 @@
 			return out;
 		  }
 		
+		  //TINY JUMP GAME
+		  var pCharacter = document.getElementById("character");
+		  var pEnemy = document.getElementsByClassName("block");
+
+		  function jump(){
+			  if (pCharacter.classList != "animate-jump"){
+				pCharacter.classList.add("animate-jump");
+			  }
+			  
+			  setTimeout(function(){
+				pCharacter.classList.remove("animate-jump")
+			  },500)//this 500 refers to the amount of time of the animate-jump class in main.css in ms
+		  }
+
+		  var checkDead = setInterval(function(){
+			  let pCharacterTop = parseInt(window.getComputedStyle(pCharacter).getPropertyValue("top"));
+				for (let i in pEnemy){
+					var pEnemyLeft = parseInt(window.getComputedStyle(pEnemy[i]).getPropertyValue("left"));
+					if (pEnemyLeft<20 && pEnemyLeft>=0 && pCharacterTop>=190) {
+						pEnemy[i].style.animation="none";
+						pEnemy[i].style.display="none";
+						alert("u lose")
+					}
+				}  
+		  },10);

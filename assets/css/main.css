@@ -2686,7 +2686,8 @@ input, select, textarea {
 				}
 				
 				.tiles article:hover img {
-					filter: blur(2px);
+					filter: blur(3px) grayscale(10%);
+					
 				}
 
 				.tiles article > a h2 {
@@ -3494,4 +3495,47 @@ input, select, textarea {
 	.wrapper.fade.inactive > .inner,
 	body.is-preload .wrapper.fade > .inner {
 		opacity: 0;
+	}
+
+	/*Specific Project CSS*/
+
+	/*Game CSS*/
+	#game{
+		width: 500px;
+		height: 260px;
+		border: 1px solid black;
+	}
+
+	#character{
+		width: 20px;
+		height: 50px;
+		background-color: red;
+		position: relative;
+		top: 210px;	
+	}
+
+	.animate-jump{
+		animation: jump 500ms;
+	}
+
+	.block{
+		width: 20px;
+		height: 20px;
+		background-color: blue;
+		position: relative;
+		top: 190px;
+		left: 480px;
+		animation: block-first 1s infinite linear;
+	}
+
+	@keyframes block-first {
+		0%{left: 480px;}
+		100%{left:-20px;}
+	}
+
+	@keyframes jump {
+		0%{top: 210px;}
+		30%{top: 170px;}
+		70%{top:170px;}
+		100%{top: 210px;}
 	}
