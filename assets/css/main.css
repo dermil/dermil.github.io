@@ -3499,6 +3499,10 @@ input, select, textarea {
 
 	/*Specific Project CSS*/
 
+	.tabContent {
+		display: none;
+	}
+
 	/*Game CSS*/
 	#game{
 		width: 500px;

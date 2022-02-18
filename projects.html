@@ -53,7 +53,13 @@
 							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
 							<p>Below you'll find some projects that I did as part of my Bootcamp's Learning process that I thought was fun and insightful!</p>
 							<!--Projects-->
-							<div>
+							<div id="projectTabs">
+								<button class="tabLink active" onclick="openProject(event,'projectTranslator')">Pig Latin Translator</button>
+								<button class="tabLink" onclick="openProject(event,'projectRegister')">Cash Register</button>
+								<button class="tabLink" onclick="openProject(event,'projectScroll')">Zombozo Infestation</button>
+							</div>
+							<!--Pig Latin Translator-->
+							<div id="projectTranslator" class="tabContent">
 							<h2>The Pig Latin Translator</h2>
 							<form method = "post">
 								<div class = "fields">
@@ -69,16 +75,20 @@
 								<input type="button" value="Translate" class ="primary" onclick="translatePigLatin('')"/>
 							</div>
 							</div>
-							<div>
+							<!--Cash Register-->
+							<div id="projectRegister" class="tabContent">
 								<h2>The Cash Register</h2>
 								<p>In the current Register: <div class="field">
 									<textarea name="cashRegister" id="cashRegister" placeholder="Message" readonly="readonly"></textarea>
 								</div></p>
 							</div>
+
 							<!--Scroller Game-->
-							<div id="game" onclick="jump()">
-								<div id="character"></div>
-								<div class="block"></div>
+							<div id="projectScroll" class="tabContent">
+								<div id="game" onclick="jump()">
+									<div id="character"></div>
+									<div class="block"></div>
+								</div>
 							</div>
 						</div>
 					</div>

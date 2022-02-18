@@ -1,5 +1,28 @@
 /* Project functions */
 
+	/* Project Tabs menu */
+	function openProject(evt, projectName){
+		//Variable ini
+		var i, tabContent, tabLink;
+
+		//Find all tabContent elements and hide them
+		tabContent = document.getElementsByClassName("tabContent");
+		for (i = 0; i < tabContent.length; i++){
+			tabContent[i].style.display="none";
+		}
+
+		//Get all "tabLink" elements and remove the "active" class
+		tabLink = document.getElementsByClassName("tabLink");
+		for (i = 0; i < tabLink.length; i++){
+			tabLink[i].className = tabLink[i].className.replace(" active","");
+		}
+
+		//Show the current tab, and add the "active" class to the button that opened it
+		document.getElementById(projectName).style.display = "block";
+		evt.currentTarget.className += " active";
+		
+	}
+
 		//Pig latin translator
 		function translatePigLatin() {
 			let vowel = /^[aeiou]/g;
@@ -175,8 +198,8 @@
 
 		  var checkDead = setInterval(function(){
 			  let pCharacterTop = parseInt(window.getComputedStyle(pCharacter).getPropertyValue("top"));
-				for (let i in pEnemy){
-					var pEnemyLeft = parseInt(window.getComputedStyle(pEnemy[i]).getPropertyValue("left"));
+				for (let i = 0; i < pEnemy.length; i++){ //This will be changed to use objects properly, in time
+					var pEnemyLeft = parseInt(window.getComputedStyle(pEnemy[i],null).getPropertyValue("left"));
 					if (pEnemyLeft<20 && pEnemyLeft>=0 && pCharacterTop>=190) {
 						pEnemy[i].style.animation="none";
 						pEnemy[i].style.display="none";
@@ -184,3 +207,5 @@
 					}
 				}  
 		  },10);
+
+		  
