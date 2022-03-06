@@ -3156,7 +3156,7 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		padding: 0em 0 6em 0 ;
+		padding: 0em 0 6em 0;
 	}
 
 		@media screen and (max-width: 736px) {
@@ -3167,6 +3167,14 @@ input, select, textarea {
 
 		}
 
+	#intro {
+		background-color: #f6f6f6;
+	}
+
+	#header {
+		background-color: #f6f6f6;
+	}
+	
 /* Footer */
 
 	#footer {
@@ -3499,9 +3507,10 @@ input, select, textarea {
 
 	/*Specific Project CSS*/
 
-	.tabContent {
+	.tabContent { /* Hides things until their tab is clicked */
 		display: none;
 	}
+
 
 	/*Game CSS*/
 	#game{
@@ -3542,4 +3551,47 @@ input, select, textarea {
 		30%{top: 170px;}
 		70%{top:170px;}
 		100%{top: 210px;}
+	}
+
+	/*Tool tip CSS */
+
+	.toolTip {
+		position: relative;
+		display: inline-block;
+	}
+
+	/*Tooltip Text*/
+	.toolTip .toolTipText {
+		visibility: hidden;
+		width:120px;
+
+		/*position the textbox*/
+		position: absolute;
+		z-index: 1;
+		bottom: 0%;
+		left: 150%;
+		margin-bottom: -9%;
+		margin-left: -10%;
+		
+		/* fade in tool tip*/
+		opacity: 0;
+		transition: opacity 0.3s;
+	}
+
+	.toolTip .toolTipText::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		right: 110%;
+		margin-left: -5px;
+		border-width: 5px;
+		border-style: solid;
+		border-color: transparent #3e4094 transparent transparent;
+	}
+
+	/*show text when you mouse over it*/
+	
+	.toolTip:hover .toolTipText{
+		visibility: visible;
+		opacity: 1;
 	}
