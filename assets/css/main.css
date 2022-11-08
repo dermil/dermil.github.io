@@ -3513,6 +3513,10 @@ input, select, textarea {
 
 
 	/*Game CSS*/
+	#projectScroll > div{
+		margin-top: 5%;
+	}
+
 	#game{
 		width: 500px;
 		height: 260px;

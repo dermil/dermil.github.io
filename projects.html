@@ -57,6 +57,7 @@
 								<button class="tabLink active" onclick="openProject(event,'projectTranslator')">Pig Latin Translator</button>
 								<button class="tabLink" onclick="openProject(event,'projectRegister')">Cash Register</button>
 								<button class="tabLink" onclick="openProject(event,'projectScroll')">Zombozo Infestation</button>
+								<button class="tabLink" onclick="openProject(event,'projectNewScroll')">Test Project</button>
 							</div>
 							<!--Pig Latin Translator-->
 							<div id="projectTranslator" class="tabContent">
@@ -89,6 +90,17 @@
 									<div id="character"></div>
 									<div class="block"></div>
 								</div>
+								<div>
+									<button class="resetButton half" onclick="resetQuick()">Reset Game</button>
+								</div>
+								
+							</div>
+
+							<!--Scroller Advanced-->
+							<div id="projectNewScroll" class="tabContent" >
+								<div id="gameGoesHere"></div>
+								<button class="resetButton half" onclick="startGame()">Game Game</button>
+
 							</div>
 						</div>
 					</div>
