@@ -11,6 +11,42 @@ const projectDetails = [
     }
     */
     {
+        id: 4,
+        category: "site",
+        img: "images/eCommerceReact.png", 
+        title: "eCommerce Store Mock-Up",
+        description: "A Full, React-based e-commerce site mock up. I made it to learn a bit of how to connect APIs and manage retail data",
+        link: 'https://ecommerce-store-example.netlify.app/', 
+        styleNumber: '6'
+    },
+    {
+        id: 5,
+        category: "app",
+        img: "images/reactCalculator.png", 
+        title: "Calculator App",
+        description: "A React-based fully functional calculator! This was fun to make and super challenging for me!",
+        link: 'https://codepen.io/dermil/full/poaGVzr', 
+        styleNumber: '4'
+    },
+    {
+        id: 6,
+        category: "app",
+        img: "images/drums.png", 
+        title: "Drum Machine",
+        description: "A react-based Drum Machine made as part of the Free Code Camp Bootcamp",
+        link: 'https://codepen.io/dermil/full/rNdjaqO', 
+        styleNumber: '5'
+    },
+    {
+        id: 7,
+        category: "app",
+        img: "images/timer.png", 
+        title: "Hobbies Survey Form",
+        description: "A Pomodoro Timer made as part of the FCC Bootcamp! Doing this after the calculator was a breeze lol.",
+        link: 'https://codepen.io/dermil/full/xxzVYay', 
+        styleNumber: '3'
+    },
+    {
         id: 1,
         category: "site",
         img: "images/manual.png", 
